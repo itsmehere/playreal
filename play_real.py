@@ -13,7 +13,7 @@ from motion_imitation.robots import robot_config
 
 from robot_interface import RobotInterface
 
-FREQ = 0.5
+BASE_FREQ = 100
 
 # Config Values
 dog_joint_stiffness = 45.0
@@ -112,7 +112,7 @@ def main(_):
         print(state.torques.shape)
         print(state.torques)
         
-        time.sleep(1 / FREQ)
+        time.sleep(1 / BASE_FREQ)
 
 
 def estimate_latent(obs, hidden_states=None):
